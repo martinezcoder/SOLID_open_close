@@ -1,6 +1,5 @@
 class Rectangle
-  attr_writer :width, :height
-  attr_reader :width, :height
+  attr_accessor :width, :height
 
   def initialize(sizes)
     @width = sizes[:width]

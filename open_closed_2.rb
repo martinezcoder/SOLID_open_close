@@ -1,6 +1,5 @@
 class Rectangle
-  attr_writer :width, :height
-  attr_reader :width, :height
+  attr_accessor :width, :height
 
   def initialize(sizes)
     @width = sizes[:width]
@@ -8,7 +7,7 @@ class Rectangle
   end
 
   def area
-    Area.calculate([] << self)
+    width * height
   end
 end
 
@@ -18,7 +17,7 @@ class Area
     self.new
     area = 0
     rectangles.each do |r|
-      area += r.width*r.height
+      area += r.area
     end
     area
   end

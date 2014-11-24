@@ -40,6 +40,9 @@ class Triangle < Shape
     @height = params[:height]
   end
 
+  def area
+    base * height / 2
+  end
 end
 
 class AreaCalculator
